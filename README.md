@@ -6,6 +6,10 @@ text onto the client's clipboard. Here is what Clippy looks like on GitHub:
 
 ![Clippy in action](http://img.skitch.com/20090213-cjiawnwig8udf5a6qf1c45cne8.png)
 
+
+This fork uses jQuery's text attribute instead of innerHTML, to ensure that HTML
+entities are copied correctly.
+
 Here is a sample Rails (Ruby) helper that can be used to place Clippy on a
 page:
 
