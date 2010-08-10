@@ -42,7 +42,7 @@ class Clippy {
     button.hitTestState = flash.Lib.attach("button_down");
 
     button.addEventListener(MouseEvent.MOUSE_UP, function(e:MouseEvent) {
-      flash.system.System.setClipboard(ExternalInterface.call("(function(id){if(document.getElementById(id)){return( $('#'+id).text() );}else{alert('WARN: ' + id + ' Not found ');}})",id));
+      flash.system.System.setClipboard(ExternalInterface.call("(function(id){if(document.getElementById(id)){return( $('#'+id).text().trim() );}else{alert('WARN: ' + id + ' Not found ');}})",id));
       ExternalInterface.call("(function(id){if(clippyCopiedCallback){ clippyCopiedCallback(id)}})", id);
       label.text = copied;
       label.setTextFormat(format);
